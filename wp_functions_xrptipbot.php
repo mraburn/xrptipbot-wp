@@ -58,7 +58,7 @@ function wp_author_xrp_tipbot_box( $content ) {
 
 add_action( 'the_content', 'wp_author_xrp_tipbot_box' );
  
-// Allow HTML in author bio section 
+// Allow HTML in XRP button section 
 
 remove_filter('pre_user_description', 'wp_filter_kses');
 

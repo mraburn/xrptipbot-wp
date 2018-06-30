@@ -1,5 +1,7 @@
 # xrptipbot-wp
 Add XRP Tipbot Button to Wordpress Theme using Functions File.
 
+Currently Set to Use a Twitter Account.
+
 Add Code to the End of the functions.php file
 /wp-content/themes/themename/functions.php

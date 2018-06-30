@@ -47,7 +47,7 @@ function wp_author_xrp_tipbot_box( $content ) {
  
 // Pass info to post content
 
-	$content = $content . '<footer class="xrptipbot" >' . $tipbot_details . '</footer>';
+	$content = $content . '<footer class="xrptipbot" ><span style="display: inline-block;margin-bottom: 5px;">Feel like sending <a href="https://twitter.com/' . $twitter . '" target="_blank">@' . $twitter . '</a> a tip?</span></br>' . $tipbot_details . '</footer>';
 	// Customize the area around the button (margins, padding, etc) of class .xrptipbot in the custom.css of your theme
 	}
 	return $content;

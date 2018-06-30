@@ -1,17 +1,16 @@
 // Begin Wordpress function.php code for XRP Tipbot //
 // Add the following to /wp-content/themes/themename/functions.php
 // Afterwards, be sure to Edit your Profile and Add your Twitter handle
-// Also be sure to set an Author to the posts you want to display the Tip Button by editing/updating a post
+// You may need to set an Author to the posts you want to display the tip button by editing/updating a post
 
-// Allow Adding Twitter Account to User/Author Profile
+// Allow Adding Twitter Account to User/Author Profile on some older or modified installations of WP
 
 function wpb_new_contactmethods( $contactmethods ) {
 
 	return $contactmethods;
-
 }
 
-// Adds the Twitter Field to the Author Profile Admin Area (/wp-admin/profile.php)
+// Adds Social Fields to the User Profile page (/wp-admin/profile.php) on some older or modified installations of WP
 
 add_filter('user_contactmethods','wpb_new_contactmethods',10,1);
 
@@ -29,7 +28,7 @@ function wp_author_xrp_tipbot_box( $content ) {
 
 	if ( get_the_author_meta('twitter') ) {
 	
-	$twitter = get_the_author_meta('twitter', $post->post_author);
+		$twitter = get_the_author_meta('twitter', $post->post_author);
  
 // Display XRP Tipbot Button
 	
@@ -41,8 +40,8 @@ function wp_author_xrp_tipbot_box( $content ) {
 	// labelpt="Woohooo " ... to change the text after tipping (the amount is appended after this string)
 	
 	
-	$tipbot_details .= '<a amount="0.25" size="275" to="' . $twitter . '" network="twitter" href="https://www.xrptipbot.com" target="_blank"></a>
-	<script async src="https://www.xrptipbot.com/static/donate/tipper.js" charset="utf-8"></script>';
+		$tipbot_details .= '<a amount="0.25" size="275" to="' . $twitter . '" network="twitter" href="https://www.xrptipbot.com" target="_blank"></a>
+		<script async src="https://www.xrptipbot.com/static/donate/tipper.js" charset="utf-8"></script>';
  
 	} 
  

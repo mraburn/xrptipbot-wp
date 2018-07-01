@@ -1,5 +1,8 @@
+<?php
+
 // Begin Wordpress function.php code for XRP Tipbot //
-// Add the following to /wp-content/themes/themename/functions.php
+
+// Add the following code below to the end of your /wp-content/themes/<themename>/functions.php
 // Afterwards, be sure to Edit your Profile and Add your Twitter handle
 // You may need to set an Author to the posts you want to display the tip button by editing/updating a post
 
